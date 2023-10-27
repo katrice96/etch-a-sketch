@@ -1,0 +1,9 @@
+.cell {
+    border-style: double;
+    border-color: black;
+}
+
+.row {
+    border-style: double;
+    border-color: rgb(241, 56, 56);
+}
