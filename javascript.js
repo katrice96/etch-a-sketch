@@ -13,7 +13,6 @@ for ( let i = 0; i < rows; i++) {
         row.appendChild(cell);
     }
 
-    container.appendChild
-    (row)
+    container.appendChild(row);
 }
 
