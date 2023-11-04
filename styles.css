@@ -1,9 +1,32 @@
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: 400px; /* Adjust the width to your preference */
+    height: 400px; /* Adjust the height to your preference */
+    border: 2px solid #000; /* Optional border around the grid */
+   
+    
+}
+
 .cell {
-    border-style: double;
-    border-color: black;
+    display: flex;
+  flex-direction: row;
+  border: 1px solid #000;
+  height: 23px; 
+}
+
+.cell:hover {
+    background-color: #000;
+}
+
+.cell.hovered {
+    background-color: #000;
 }
 
 .row {
-    border-style: double;
-    border-color: rgb(241, 56, 56);
-}
+    /*background-color: #ffffff; /* Adjust the background color to your preference */
+  border: 1px solid #000; /* Optional border around each cell */
+  height: 398px; /* Ensures each cell takes up the entire grid cell */
+} 
+
