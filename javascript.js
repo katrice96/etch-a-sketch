@@ -27,3 +27,36 @@ cells.forEach(function(cell) {
     });
 });
 
+function resetGrid(squaresPerSide) {
+    const container = document.getElementById('gridContainer');
+    container.innerHTML = ''; // Clear the existing grid
+
+    const rows = 16;
+    const columns = 16;
+
+    for (let i = 0; i < rows; i++) {
+        const row = document.createElement('div');
+        row.classList.add('row');
+
+        for (let j = 0; j < columns; j++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            row.appendChild(cell);
+        }
+
+        container.appendChild(row);
+    }
+
+    const cells = document.querySelectorAll('.cell');
+
+    cells.forEach(function(cell) {
+        cell.addEventListener('mouseover', function() {
+            if (!cell.classList.contains('hovered')) {
+                cell.classList.add('hovered');
+            }
+        });
+    });
+}
+
+const resetButton = document.getElementById('resetButton');
+resetButton.addEventListener('click', resetGrid)
