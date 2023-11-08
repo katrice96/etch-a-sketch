@@ -6,7 +6,9 @@
 
 }
 
-#gridContainer {
+
+
+.gridContainerStyle{
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
@@ -28,7 +30,6 @@
     border: 2px solid #000; /* Optional border around the grid */
        
         
-
 }
 
 .cell {
