@@ -96,19 +96,21 @@ function bigGrid() {
 const sizeButtonOne = document.getElementById('sizeButtonOne');
 sizeButtonOne.addEventListener('click', bigGrid);
 
-//WORKING AREA // WORKING AREA // 
+
 sizeButtonOne.addEventListener('click', function () {
     
     const gridContainer = document.getElementById('gridContainer');
     gridContainer.classList.add('gridContainerSizeTwo');
-    
 
-    
-    
 });
 
-
-
+//WORKING AREA // WORKING AREA // 
+sizeButtonOne.addEventListener('click', function () {
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(function (cell) {
+        cell.classList.add('cellSizeTwo');
+    });
+});
 
 function biggerGrid() {
     const container = document.getElementById('gridContainer');
