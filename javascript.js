@@ -27,7 +27,7 @@ cells.forEach(function(cell) {
     });
 });
 
-function resetGrid(squaresPerSide) {
+function resetGrid() {
     const container = document.getElementById('gridContainer');
     container.innerHTML = ''; // Clear the existing grid
 
@@ -60,3 +60,88 @@ function resetGrid(squaresPerSide) {
 
 const resetButton = document.getElementById('resetButton');
 resetButton.addEventListener('click', resetGrid)
+
+function bigGrid() {
+    const container = document.getElementById('gridContainer');
+    container.innerHTML = ''; // Clear the existing grid
+
+    const rows = 32;
+    const columns = 32;
+
+    for (let i = 0; i < rows; i++) {
+        const row = document.createElement('div');
+        row.classList.add('row');
+
+        for (let j = 0; j < columns; j++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            row.appendChild(cell);
+        }
+
+        container.appendChild(row);
+    }
+
+    const cells = document.querySelectorAll('.cell');
+
+    cells.forEach(function(cell) {
+        cell.addEventListener('mouseover', function() {
+            if (!cell.classList.contains('hovered')) {
+                cell.classList.add('hovered');
+            }
+        });
+    });
+
+}
+
+const sizeButtonOne = document.getElementById('sizeButtonOne');
+sizeButtonOne.addEventListener('click', bigGrid);
+
+//WORKING AREA // WORKING AREA // 
+sizeButtonOne.addEventListener('click', function () {
+    
+    const gridContainer = document.getElementById('gridContainer');
+    gridContainer.classList.add('gridContainerSizeTwo');
+    
+
+    
+    
+});
+
+
+
+
+function biggerGrid() {
+    const container = document.getElementById('gridContainer');
+    container.innerHTML = ''; // Clear the existing grid
+
+    const rows = 64;
+    const columns = 64;
+
+    for (let i = 0; i < rows; i++) {
+        const row = document.createElement('div');
+        row.classList.add('row');
+
+        for (let j = 0; j < columns; j++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            row.appendChild(cell);
+        }
+
+        container.appendChild(row);
+    }
+
+    const cells = document.querySelectorAll('.cell');
+
+    cells.forEach(function(cell) {
+        cell.addEventListener('mouseover', function() {
+            if (!cell.classList.contains('hovered')) {
+                cell.classList.add('hovered');
+            }
+        });
+    });
+
+}
+
+const sizeButtonTwo = document.getElementById('sizeButtonTwo');
+sizeButtonTwo.addEventListener('click', biggerGrid);
+
