@@ -3,7 +3,7 @@
 }
 
 #resetButton {
-    
+
 }
 
 #gridContainer {
@@ -15,6 +15,20 @@
     border: 2px solid #000; /* Optional border around the grid */
    
     
+}
+
+.gridContainerSizeTwo {
+
+
+    display: grid;
+    grid-template-columns: repeat(32, 1fr);
+    grid-template-rows: repeat(32, 1fr);
+    width: 400px; /* Adjust the width to your preference */
+    height: 400px; /* Adjust the height to your preference */
+    border: 2px solid #000; /* Optional border around the grid */
+       
+        
+
 }
 
 .cell {
