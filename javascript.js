@@ -29,7 +29,7 @@ cells.forEach(function(cell) {
 
 function resetGrid() {
     const container = document.getElementById('gridContainer');
-    //container.innerHTML = ''; // Clear the existing grid
+    container.innerHTML = ''; // Clear the existing grid
 
     const rows = 16;
     const columns = 16;
@@ -56,6 +56,13 @@ function resetGrid() {
             }
         });
     });
+
+        
+    if (document.querySelector('.gridContainerSizeTwo') || document.querySelector('.gridContainerSizeThree')) {
+           gridContainer.classList.remove('gridContainerSizeTwo', 'gridContainerSizeThree')
+        
+           
+    };
 }
 
 const resetButton = document.getElementById('resetButton');
@@ -90,6 +97,12 @@ function bigGrid() {
             }
         });
     });
+        //WORKINGAREA//WORKINGAREA
+    if ( document.querySelector('.gridContainerSizeThree')) {
+        gridContainer.classList.remove('gridContainerSizeThree')
+     
+        
+ };
 
 }
 
@@ -155,7 +168,7 @@ sizeButtonTwo.addEventListener('click', function () {
 
 });
 
-//WORKING AREA // WORKING AREA // 
+
 sizeButtonTwo.addEventListener('click', function () {
     const cells = document.querySelectorAll('.cell');
     cells.forEach(function (cell) {
