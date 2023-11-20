@@ -1,4 +1,9 @@
+body {
+    background-color: #b54a4a;
+}
+
 #controlContainer{
+    
 
 }
 
@@ -15,7 +20,7 @@
     width: 400px; /* Adjust the width to your preference */
     height: 400px; /* Adjust the height to your preference */
     border: 2px solid #000; /* Optional border around the grid */
-   
+    background-color:#0bf7a8
     
 }
 
@@ -73,7 +78,7 @@
 }
 
 .cell.hovered {
-    background-color: #000;
+    background-color: #8d6464;
 }
 
 .row {
