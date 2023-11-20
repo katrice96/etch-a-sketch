@@ -1,6 +1,79 @@
+#controlContainer{
+
+}
+
+#resetButton {
+
+}
+
+
+
+.gridContainerStyle{
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: 400px; /* Adjust the width to your preference */
+    height: 400px; /* Adjust the height to your preference */
+    border: 2px solid #000; /* Optional border around the grid */
+   
+    
+}
+
+.gridContainerSizeTwo {
+
+
+    display: grid;
+    grid-template-columns: repeat(32, 1fr);
+    grid-template-rows: repeat(32, 1fr);
+    width: 400px; /* Adjust the width to your preference */
+    height: 400px; /* Adjust the height to your preference */
+    border: 2px solid #000; /* Optional border around the grid */
+       
+        
+}
+
+.gridContainerSizeThree {
+
+    display: grid;
+    grid-template-columns: repeat(64, 1fr);
+    grid-template-rows: repeat(64, 1fr);
+    width: 400px; /* Adjust the width to your preference */
+    height: 400px; /* Adjust the height to your preference */
+    border: 2px solid #000; /* Optional border around the grid */
+       
+
+}
+
 .cell {
-    border-style: double;
-    border-color: black;
+    display: flex;
+  flex-direction: row;
+  border: 1px solid #000;
+  height: 5.77%; 
+}
+
+.cellSizeTwo {
+
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+    height: 2.63%; 
+}
+
+.cellSizeThree {
+
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+    height: 1.07%; 
+}
+
+
+.cell:hover {
+    background-color: #000;
+}
+
+.cell.hovered {
+    background-color: #000;
 }
 
 .row {
