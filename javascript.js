@@ -17,13 +17,12 @@ function createGrid(rows, columns) {
     }
 
 }
-//creates initial grid 
-createGrid(rows,columns);
 
+function addHovered() {
+    
+    const cells = document.querySelectorAll('.cell')
 
-const cells = document.querySelectorAll('.cell')
-
-cells.forEach(function(cell) {
+    cells.forEach(function(cell) {
     console.log(cell);
     cell.addEventListener('mouseover', function(){
         if (!cell.classList.contains('hovered')) {
@@ -31,7 +30,12 @@ cells.forEach(function(cell) {
         }
           console.log('mouse over cell')  
     });
-});
+ });
+
+}
+//creates initial grid 
+createGrid(rows,columns);
+addHovered();
 
 function resetGrid() {
     const container = document.getElementById('gridContainer');
@@ -41,16 +45,7 @@ function resetGrid() {
     const columns = 16;
 
    createGrid(rows,columns);
-
-    const cells = document.querySelectorAll('.cell');
-
-    cells.forEach(function(cell) {
-        cell.addEventListener('mouseover', function() {
-            if (!cell.classList.contains('hovered')) {
-                cell.classList.add('hovered');
-            }
-        });
-    });
+   addHovered();
 
         
     if (document.querySelector('.gridContainerSizeTwo') || document.querySelector('.gridContainerSizeThree')) {
@@ -71,20 +66,10 @@ function bigGrid() {
     const columns = 32;
 
     createGrid(rows, columns);
-
-    const cells = document.querySelectorAll('.cell');
-
-    cells.forEach(function(cell) {
-        cell.addEventListener('mouseover', function() {
-            if (!cell.classList.contains('hovered')) {
-                cell.classList.add('hovered');
-            }
-        });
-    });
-        //WORKINGAREA//WORKINGAREA
+    addHovered();
+        
     if ( document.querySelector('.gridContainerSizeThree')) {
         gridContainer.classList.remove('gridContainerSizeThree')
-     
         
  };
 
@@ -117,16 +102,8 @@ function biggerGrid() {
     const columns = 64;
 
    createGrid(rows,columns);
+   addHovered();
 
-    const cells = document.querySelectorAll('.cell');
-
-    cells.forEach(function(cell) {
-        cell.addEventListener('mouseover', function() {
-            if (!cell.classList.contains('hovered')) {
-                cell.classList.add('hovered');
-            }
-        });
-    });
 
 }
 
