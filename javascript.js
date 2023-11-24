@@ -1,19 +1,25 @@
-const rows = 16// defines rows 
-const columns = 16 // defines columns 
+const rows = 16// defines initial rows 
+const columns = 16 // defines initial columns 
 const container = document.getElementById('gridContainer');//looks for grid id 
 
-for ( let i = 0; i < rows; i++) { //loops for the amount of rows 
-    const row = document.createElement('div');// creates a div for each row 
-    row.classList.add('row'); // adds .row class to rows 
-
-    for (let j = 0; j < columns; j++) { // nested loop that will loop for the amount of columns x times based on amount of rows 
-        const cell = document.createElement('div') 
-        cell.classList.add('cell');
-        row.appendChild(cell);
+function createGrid(rows, columns) {
+    for ( let i = 0; i < rows; i++) { //loops for the amount of rows 
+        const row = document.createElement('div');// creates a div for each row 
+        row.classList.add('row'); // adds .row class to rows 
+    
+        for (let j = 0; j < columns; j++) { // nested loop that will loop for the amount of columns x times based on amount of rows 
+            const cell = document.createElement('div') 
+            cell.classList.add('cell');
+            row.appendChild(cell);
+        }
+    
+        container.appendChild(row);
     }
 
-    container.appendChild(row);
 }
+//creates initial grid 
+createGrid(rows,columns);
+
 
 const cells = document.querySelectorAll('.cell')
 
@@ -34,18 +40,7 @@ function resetGrid() {
     const rows = 16;
     const columns = 16;
 
-    for (let i = 0; i < rows; i++) {
-        const row = document.createElement('div');
-        row.classList.add('row');
-
-        for (let j = 0; j < columns; j++) {
-            const cell = document.createElement('div');
-            cell.classList.add('cell');
-            row.appendChild(cell);
-        }
-
-        container.appendChild(row);
-    }
+   createGrid(rows,columns);
 
     const cells = document.querySelectorAll('.cell');
 
@@ -75,18 +70,7 @@ function bigGrid() {
     const rows = 32;
     const columns = 32;
 
-    for (let i = 0; i < rows; i++) {
-        const row = document.createElement('div');
-        row.classList.add('row');
-
-        for (let j = 0; j < columns; j++) {
-            const cell = document.createElement('div');
-            cell.classList.add('cell');
-            row.appendChild(cell);
-        }
-
-        container.appendChild(row);
-    }
+    createGrid(rows, columns);
 
     const cells = document.querySelectorAll('.cell');
 
@@ -132,18 +116,7 @@ function biggerGrid() {
     const rows = 64;
     const columns = 64;
 
-    for (let i = 0; i < rows; i++) {
-        const row = document.createElement('div');
-        row.classList.add('row');
-
-        for (let j = 0; j < columns; j++) {
-            const cell = document.createElement('div');
-            cell.classList.add('cell');
-            row.appendChild(cell);
-        }
-
-        container.appendChild(row);
-    }
+   createGrid(rows,columns);
 
     const cells = document.querySelectorAll('.cell');
 
